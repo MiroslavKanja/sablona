@@ -58,9 +58,21 @@
       <section class="container">
         <div class="row">
           <div class="col-100 text-center">
+
               <p><strong><em>Elit culpa id mollit irure sit. Ex ut et ea esse culpa officia ea incididunt elit velit veniam qui. Mollit deserunt culpa incididunt laborum commodo in culpa.</em></strong></p>
           </div>
         </div>
+          <?php
+          $hour = date ( "H");
+          if ($hour < 12) {
+              echo "<h3>Dobre rano</h3>";
+          } elseif ($hour < 18) {
+              echo "<h3>Dobry den</h3>";
+          } else {
+              echo "<h3>Dobry vecer</h3>";
+          }
+
+          ?>
       </section>
       <section class="container">
         <div class="row">
