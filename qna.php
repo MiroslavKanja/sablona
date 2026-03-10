@@ -35,21 +35,13 @@
       </div>
     </section>
     <section class="container">
-      <div class="row">
-        <div class="col-100 text-center">
-          <?php
-              $hour = date ( "H");
-              if ($hour < 12) {
-                  echo "<h3>Dobre rano</h3>";
-          } elseif ($hour < 18) {
-          echo "<h3>Dobry den</h3>";
-          } else {
-          echo "<h3>Dobry vecer</h3>";
-          }
-
-          ?>
+      <?php include "otazky.php";?>
+      <?php for ($i = 0; $i < count($otazky); $i++) { ?>
+        <div class="accordion">
+            <div class="question"><?php echo $otazky[$i]; ?></div>
+            <div class="answer"><?php echo $odpovede[$i]; ?></div>
         </div>
-      </div>
+      <?php } ?>
     </section>
     <section class="container">
       <div class="row">
